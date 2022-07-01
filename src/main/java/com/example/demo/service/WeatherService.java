@@ -16,6 +16,7 @@ public class WeatherService {
 
         RestTemplate template = RestTemplateConfig.restTemplate;
         String url = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m";
+//      old variables i made but found a more efficient method
 //        String lonUrl = "longitude=".concat(lon);
 //        String latUrl = "latitude=".concat(lat);
 //        String urlReq = url.concat(lonUrl).concat("&").concat(latUrl);
