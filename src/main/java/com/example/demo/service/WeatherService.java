@@ -13,7 +13,6 @@ import java.util.HashMap;
 public class WeatherService {
     private final Logger logger = LoggerFactory.getLogger(getClass());
     public Object getWeather(Float lon, Float lat) {
-
         RestTemplate template = RestTemplateConfig.restTemplate;
         String url = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m";
 //      old variables i made but found a more efficient method
@@ -34,4 +33,17 @@ public class WeatherService {
         }
         return weatherApiResponse;
     }
+//    public Object GetWeatherCity(String city){
+//        RestTemplate template = RestTemplateConfig.restTemplate;
+//
+//        Object weatherApiReponse = null;
+//
+//        if (city == "newyork") {
+//            // block of code to be executed if the condition is true
+//        }
+//        String url = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m";
+//
+//        return 1;
+//    }
+
 }
