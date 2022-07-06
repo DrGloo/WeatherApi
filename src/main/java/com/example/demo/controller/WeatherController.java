@@ -16,7 +16,13 @@ public class WeatherController {
     @PostMapping("/hello")
     public Object hello(@RequestBody WeatherRequestModel requestBody) {
         logger.info("endpoint /hello query hit sucessfully");
-        return weatherService.getWeather(requestBody.getLongitude(), requestBody.getLatitude());
+        return weatherService.getWeather(requestBody);
+    }
+
+    @GetMapping("/test")
+    public Object city(){
+        logger.info("endpoint /test query hit sucessfully");
+        return weatherService.callWeatherAPI((float) -71.00, 42.00F);
     }
 
 }
