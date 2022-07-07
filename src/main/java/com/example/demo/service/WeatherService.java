@@ -50,10 +50,12 @@ public class WeatherService {
     }
 
     /**
-     * This method
-     * @param lon
-     * @param lat
-     * @return
+     * This method is the callWeatherAPI method.
+     * It returns a array of information based on lat/ long combo
+     * It will call the Open-Meteo API
+     * @param lon longitude
+     * @param lat latitude
+     * @return a response object with weather information from the lat/long combo
      */
     public Object callWeatherAPI(Float lon, Float lat) {
         RestTemplate template = RestTemplateConfig.restTemplate;
