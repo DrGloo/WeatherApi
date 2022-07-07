@@ -48,6 +48,13 @@ public class WeatherService {
         // Call the weather API with latitude and longitude
         return callWeatherAPI(lat, lon);
     }
+
+    /**
+     * This method
+     * @param lon
+     * @param lat
+     * @return
+     */
     public Object callWeatherAPI(Float lon, Float lat) {
         RestTemplate template = RestTemplateConfig.restTemplate;
         String url = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m";
