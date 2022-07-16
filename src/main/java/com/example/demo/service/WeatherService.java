@@ -60,10 +60,6 @@ public class WeatherService {
     public Object callWeatherAPI(Float lon, Float lat) {
         RestTemplate template = RestTemplateConfig.restTemplate;
         String url = "https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}&hourly=temperature_2m";
-//      Old code I wrote to concatenate but found a more dynamic/efficient method
-//      String lonUrl = "longitude=".concat(lon);
-//      String latUrl = "latitude=".concat(lat);
-//      String urlReq = url.concat(lonUrl).concat("&").concat(latUrl);
 
         Object weatherApiResponse = null;
         HashMap<String, Float> params= new HashMap<>();
